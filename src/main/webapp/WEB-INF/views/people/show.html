@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person info</title>
+</head>
+<body>
+<h1>Person info</h1>
+<ul>
+    <li th:text="${#strings.concat('name = ',person.getName())}">personName</li>
+    <li th:text="${#strings.concat('id = ',person.getId())}">personId</li>
+</ul>
+</body>
+</html>
