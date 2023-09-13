@@ -10,5 +10,13 @@
     <li th:text="${#strings.concat('name = ',person.getName())}">personName</li>
     <li th:text="${#strings.concat('id = ',person.getId())}">personId</li>
 </ul>
+<br/>
+<a th:href="@{/people/{id}/edit(id=${person.getId()})}">Click here for updating the person</a>
+<br/>
+<br/>
+<br/>
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+    <input type="submit" value="Push for deleting the person"/>
+</form>
 </body>
 </html>
